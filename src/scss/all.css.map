@@ -5,7 +5,8 @@
         "all.scss",
         "_grid.scss",
         "components/_app.scss",
-        "components/_login.scss"
+        "components/_login.scss",
+        "components/_player.scss"
     ],
     "names": [],
     "file": "all.css"
