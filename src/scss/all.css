@@ -4,6 +4,14 @@
   list-style: none;
 }
 
+body {
+  background-color: black;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .login {
   display: -ms-grid;
   display: grid;
@@ -32,4 +40,334 @@
   color: white;
   text-decoration: none;
 }
+
+.player__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar {
+  height: 100vh;
+  min-width: 230px;
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  background-color: #040404;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.sidebar__logo {
+  height: 70px;
+  padding: 10px;
+  margin-right: auto;
+}
+
+.sidebar__title {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.sidebar > hr {
+  border: 1px solid #282828;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.sidebarOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: gray;
+  height: 40px;
+  cursor: pointer;
+  -webkit-transition: 200ms color ease-in;
+  transition: 200ms color ease-in;
+}
+
+.sidebarOption:hover {
+  color: white;
+}
+
+.sidebarOption__icon {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.sidebarOption > p {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.body {
+  height: 100vh;
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5b5773), to(black));
+  background: linear-gradient(#5b5773, black);
+  color: white;
+  padding: 30px;
+  overflow-y: overlay;
+}
+
+.body__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 10px;
+}
+
+.body__info > img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 20vw;
+  margin: 0 20px;
+  -webkit-box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+.body__info__text > h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.body__info__text > p {
+  font-size: 14px;
+}
+
+.body__songs {
+  margin: 20px -30px;
+}
+
+.body__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body__icons > .MuiSvgIcon-root {
+  margin-right: 20px;
+}
+
+.body__icons__play {
+  font-size: 80px !important;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.body__icons__play:hover {
+  -webkit-transition: 100ms -webkit-transform ease-in;
+  transition: 100ms -webkit-transform ease-in;
+  transition: 100ms transform ease-in;
+  transition: 100ms transform ease-in, 100ms -webkit-transform ease-in;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.songRow {
+  margin-left: 20px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.songRow:hover {
+  cursor: pointer;
+  background-color: black;
+  opacity: .8;
+}
+
+.songRow__info {
+  margin-left: 20px;
+}
+
+.songRow__info > h1 {
+  font-size: 16px;
+}
+
+.songRow__info > p {
+  font-style: 14px;
+  margin-top: 3px;
+  color: gray;
+}
+
+.songRow__album {
+  height: 40px;
+  width: 40px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header__left {
+  -webkit-box-flex: .5;
+      -ms-flex: .5;
+          flex: .5;
+  min-width: 70px;
+  background-color: white;
+  color: gray;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.header__left > input {
+  border: none;
+  width: 100%;
+}
+
+.header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__right > h4 {
+  margin-left: 10px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+  width: 97%;
+  background-color: #282828;
+  padding: 20px;
+}
+
+.footer__center {
+  color: white;
+  -webkit-box-flex: 0.4;
+      -ms-flex: 0.4;
+          flex: 0.4;
+  padding: 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 300px;
+}
+
+.footer__left {
+  width: 300px;
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.footer__left__albumLogo {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 20px;
+}
+
+.footer__left__songInfo h4 {
+  margin-bottom: 5px;
+}
+
+.footer__left__songInfo p {
+  font-size: 12px;
+}
+
+.footer__right {
+  -webkit-box-flex: 0.3;
+      -ms-flex: 0.3;
+          flex: 0.3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__right * .MuiSlider-root {
+  color: green;
+}
+
+.footer__green {
+  color: #1db954;
+}
+
+.footer__icon:hover, .footer__green:hover {
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  -webkit-transform: scale(1.2) !important;
+          transform: scale(1.2) !important;
+}
+
+/*
+        login  -> 
+
+app ->              
+                   footer
+
+                   
+        player ->  sidebar ->   sidebarOption
+
+                                header 
+                    body   -> 
+                                songRow
+*/
 /*# sourceMappingURL=all.css.map */

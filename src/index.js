@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import {DataLayer} from './components/DataLayer';
+import {DataLayer} from './DataLayer';
 import * as serviceWorker from "./serviceWorker";
 import reducer, {initialState} from './reducer';
 

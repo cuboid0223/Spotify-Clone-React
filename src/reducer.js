@@ -3,8 +3,8 @@ export const initialState = {
   playlists: [],
   playing: false,
   item: null,
-  token: 'BQCX-oSAWei7V4QtJKOGyp9hH9G4yO8B2AkoJPGSdX0H5kC6x6n_L2yc1a2odTH7ahogv6J2ypWAHRxrVP2RuByqZ-6YIPEm1hbtoUScC3D08pfw9Ea944kNopCycsBvlul49w83LC1ysr2Q7gneEVc-fUEmndaCxkBbMyA7ngEOgW0PM_NV',
-  //將 token: null, 換成自己的 token 可以免除之後一直按登入， 開發完後後要換回來 token: null,
+  // token: 'BQCX-oSAWei7V4QtJKOGyp9hH9G4yO8B2AkoJPGSdX0H5kC6x6n_L2yc1a2odTH7ahogv6J2ypWAHRxrVP2RuByqZ-6YIPEm1hbtoUScC3D08pfw9Ea944kNopCycsBvlul49w83LC1ysr2Q7gneEVc-fUEmndaCxkBbMyA7ngEOgW0PM_NV',
+  // //將 token: null, 換成自己的 token 可以免除之後一直按登入， 開發完後後要換回來 token: null,
 
 };
 
@@ -21,6 +21,16 @@ const reducer = (state, action) => {
         ...state,
         token: action.token,
       };
+    case "SET_PLAYLISTS":
+      return {
+        ...state,
+        playlists: action.playlists,
+      }
+    case "SET_DISCOVER_WEEKLY":
+      return {
+        ...state,
+        discover_weekly: action.discover_weekly,
+      }
 
 
     default:

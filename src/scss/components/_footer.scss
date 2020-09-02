@@ -1,0 +1,66 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    height: 65px;
+    width: 97%;
+    background-color: #282828;
+    padding: 20px;
+
+    &__center {
+        color: white;
+        flex: 0.4;
+        padding: 0 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 300px;
+    }
+
+    &__left {
+        width: 300px;
+        flex: 0.3;
+        display: flex;
+        align-items: center;
+        color: white;
+
+        &__albumLogo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-right: 20px;
+        }
+
+        &__songInfo h4 {
+            margin-bottom: 5px;
+        }
+
+        &__songInfo p {
+            font-size: 12px;
+        }
+    }
+
+    &__right {
+        flex: 0.3;
+        display: flex;
+        align-items: center;
+        color: white;
+        justify-content: space-between;
+
+        & * .MuiSlider-root {
+            // * .MuiSlider-root => 所有 Material.UI slider
+            color: green;
+        }
+    }
+
+    &__green {
+        color: #1db954;
+    }
+
+    &__icon:hover,
+    &__green:hover {
+        transition: transform .2s ease-in-out;
+        transform: scale(1.2) !important;
+    }
+}

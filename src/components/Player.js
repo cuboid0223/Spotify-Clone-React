@@ -1,13 +1,23 @@
-import React from 'react'
+import React from "react";
+import Sidebar from "./Sidebar";
+import Body from './Body';
+import Footer from './Footer';
 
-const Player = ({spotify}) => {
-    return (
-      <div>
-        {/*slide bar */}
+
+const Player = ({ spotify }) => {
+  return (
+    <div className="player">
+      <div className="player__body">
+        {/* side bar */}
+        <Sidebar />
         {/* body */}
-        {/*footer */}
+        <Body spotify={spotify}/>
       </div>
-    );
-}
 
-export default Player
+      {/* footer */}
+      <Footer />
+    </div>
+  );
+};
+
+export default Player;

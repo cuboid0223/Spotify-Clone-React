@@ -3,7 +3,7 @@ import "./scss/all.css";
 
 import { getTokenFromUrl } from "./spotify";
 import SpotifyWebApi from "spotify-web-api-js";
-import { useDataLayerValue } from "./components/DataLayer"; // Context API
+import { useDataLayerValue } from "./DataLayer"; // Context API
 
 import Login from "./components/Login";
 import Player from "./components/Player";
@@ -34,12 +34,30 @@ function App() {
           user: user,
         });
       });
+
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists: playlists,
+        });
+      });
+
+      spotify.getPlaylist("317rb3t3hbwcngbjxgo4xv6hjbk4").then((response) => {
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: response,
+        });
+      });
     }
     // console.log("Token: ", _token);
   }, []);
   // console.log("user: ", user); //test user state working?
   // console.log("token: ", token); //test token state working?
-  return <div className="App">{token ? <Player spotify={spotify}/> : <Login />}</div>;
+  return (
+    <div className="App">
+      {token ? <Player spotify={spotify} /> : <Login />}
+    </div>
+  );
 }
 
 export default App;

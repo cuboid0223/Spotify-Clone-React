@@ -1,5 +1,27 @@
 @import "./grid";
 
+/// components
 @import "./components/app";
 @import "./components/login";
 @import "./components/player";
+@import "./components/sidebar";
+@import "./components/sidebarOption";
+@import "./components/body";
+@import "./components/songRow";
+@import "./components/header";
+@import "./components/footer";
+
+
+/*
+        login  -> 
+
+app ->              
+                   footer
+
+                   
+        player ->  sidebar ->   sidebarOption
+
+                                header 
+                    body   -> 
+                                songRow
+*/
