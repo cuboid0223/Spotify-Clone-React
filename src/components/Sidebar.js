@@ -5,8 +5,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import { useDataLayerValue } from '../DataLayer';
-
-
+import AddBoxIcon from "@material-ui/icons/AddBox";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 const Sidebar = () => {
     const [{playlists}, dispatch] = useDataLayerValue()
 
@@ -22,13 +22,13 @@ const Sidebar = () => {
         <SidebarOption Icon={SearchIcon} title="搜尋" />
         <SidebarOption Icon={LibraryMusicIcon} title="你的音樂庫" />
 
-        <strong className="sidebar__title">PLAYLIST</strong>
+        <strong className="sidebar__title">播放清單</strong>
+        <SidebarOption Icon={AddBoxIcon} title="建立播放清單" />
+        <SidebarOption Icon={FavoriteBorderIcon} title="已按讚的歌曲" />
         <hr />
         {playlists?.items?.map((playlist) => (
           <SidebarOption title={playlist.name} />
         ))}
-
-       
       </div>
     );
 }

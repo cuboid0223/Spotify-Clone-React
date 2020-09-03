@@ -3,7 +3,7 @@
     justify-content: space-between;
     position: fixed;
     bottom: 0;
-    height: 65px;
+    height: 40px;
     width: 97%;
     background-color: #282828;
     padding: 20px;
@@ -26,8 +26,8 @@
         color: white;
 
         &__albumLogo {
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             object-fit: contain;
             margin-right: 20px;
         }

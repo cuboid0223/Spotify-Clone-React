@@ -69,6 +69,9 @@ body::-webkit-scrollbar {
   margin-left: 10px;
   padding: 5px;
   font-size: 12px;
+  color: gray;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .sidebar > hr {
@@ -179,6 +182,46 @@ body::-webkit-scrollbar {
           transform: scale(1.08);
 }
 
+.body__playlistSongs {
+  padding: 20px;
+}
+
+.body__playlistSongs > hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+}
+
+.body__playlistSongs__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body__playlistSongs__title > p {
+  font-size: 12px;
+  color: gray;
+}
+
+.body__playlistSongs .number {
+  width: 2%;
+}
+
+.body__playlistSongs .album__title {
+  width: 40%;
+}
+
+.body__playlistSongs .album {
+  width: 20%;
+}
+
+.body__playlistSongs .add__date {
+  width: 20%;
+}
+
 .songRow {
   margin-left: 20px;
   padding: 20px;
@@ -270,7 +313,7 @@ body::-webkit-scrollbar {
           justify-content: space-between;
   position: fixed;
   bottom: 0;
-  height: 65px;
+  height: 40px;
   width: 97%;
   background-color: #282828;
   padding: 20px;
@@ -309,8 +352,8 @@ body::-webkit-scrollbar {
 }
 
 .footer__left__albumLogo {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-right: 20px;

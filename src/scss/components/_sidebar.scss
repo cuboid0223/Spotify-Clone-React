@@ -12,12 +12,17 @@
         padding: 10px;
         margin-right: auto;
     }
-    &__title{
+
+    &__title {
         margin-left: 10px;
         padding: 5px;
         font-size: 12px;
+        color: gray;
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
-    & > hr{
+
+    &>hr {
         border: 1px solid #282828;
         width: 90%;
         margin: 10px auto;

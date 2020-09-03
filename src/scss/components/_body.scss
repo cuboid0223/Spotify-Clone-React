@@ -5,6 +5,7 @@
     color: white;
     padding: 30px;
     overflow-y: overlay;
+
     &__info {
         display: flex;
         align-items: flex-end;
@@ -49,8 +50,39 @@
         }
 
         &__play:hover {
-           transition: 100ms transform ease-in;
-           transform: scale(1.08);
+            transition: 100ms transform ease-in;
+            transform: scale(1.08);
+        }
+    }
+
+    &__playlistSongs {
+        padding: 20px;
+        & > hr{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border:1px solid gray;
+        }
+        &__title {
+            display: flex;
+            align-items: center;
+            & > p {
+                font-size: 12px;
+                color: gray;
+            }
+        }
+
+        .number {
+            width: 2%;
+        }
+
+        .album__title{
+            width: 40%;
+        }
+        .album{
+            width: 20%;
+        }
+        .add__date{
+            width: 20%;
         }
     }
 }

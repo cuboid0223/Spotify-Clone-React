@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const SongRow = ({track="test"}) => {
-    return (
-        <div className='songRow'>
-            <img className='songRow__album' src={track.album.images[0].url} alt=""/>
+const SongRow = ({ url, name, album }) => {
+  // ({ track }) => {
+  return (
+    <div className="songRow">
+      {/* 
+             <img className='songRow__album' src={track.album.images[0].url} alt="..."/>
             <div className='songRow__info'>
                 <h1>{track.name}</h1>
                 <p>
@@ -11,8 +13,15 @@ const SongRow = ({track="test"}) => {
                 {track.album.name}
                 </p>
             </div>
-        </div>
-    )
-}
+        */}
 
-export default SongRow
+      <img className="songRow__album" src={url} alt="..." />
+      <div className="songRow__info">
+        <h1>{name}</h1>
+        <p>{album}</p>
+      </div>
+    </div>
+  );
+};
+
+export default SongRow;
